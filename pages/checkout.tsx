@@ -163,7 +163,7 @@ export default function Checkout() {
           merchant: MERCHANT_ADDRESS,
           eth: totalETH.toFixed(6),
           usd: totalUSD.toFixed(2),
-          items: cartItems.map(item => item.name),
+          items: cartItems.map(item => `${item.name} x ${item.quantity}`),
           time: Math.floor(Date.now() / 1000),
           points: totalUSD.toFixed(2),
           transactiontype: 'purchase',
